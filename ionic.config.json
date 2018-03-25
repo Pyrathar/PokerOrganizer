@@ -1,0 +1,8 @@
+{
+  "name": "PokerOrganizer",
+  "app_id": "2184c0a8",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
+}
