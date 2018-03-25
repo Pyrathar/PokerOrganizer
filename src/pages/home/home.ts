@@ -1,7 +1,9 @@
 import { Component } from '@angular/core';
 import { NavController , Platform, AlertController} from 'ionic-angular';
 import { LocalNotifications } from '@ionic-native/local-notifications';
+import { ViewChild } from '@angular/core';
 import moment from 'moment';
+import { TimerComponent } from './timer';
 
 @Component({
   selector: 'page-home',
@@ -9,6 +11,7 @@ import moment from 'moment';
 })
 export class HomePage {
 
+   @ViewChild(TimerComponent) timer: TimerComponent;
    notifyTime: any;
    notifications: any[] = [];
    days: any[];
@@ -33,9 +36,12 @@ export class HomePage {
 
        }
 
-       ionViewDidLoad(){
+         ngOnInit() {
+           setTimeout(() => {
+             this.timer.startTimer();
+           }, 10000)
+         }
 
-       }
 
        timeChange(time){
          this.chosenHours = time.hour.value;

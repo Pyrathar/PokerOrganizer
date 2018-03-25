@@ -6,11 +6,13 @@ import { StatusBar } from '@ionic-native/status-bar';
 import {LocalNotifications} from "@ionic-native/local-notifications";
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
+import { TimerComponent } from '../pages/home/timer';
 
 @NgModule({
   declarations: [
     MyApp,
-    HomePage
+    HomePage,
+    TimerComponent
   ],
   imports: [
     BrowserModule,
